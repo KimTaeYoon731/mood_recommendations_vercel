@@ -1,7 +1,12 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "api/recommend.py", "use": "@vercel/python" },
+    { "src": "index.html",        "use": "@vercel/static" }
+  ],
   "routes": [
     { "src": "/get_recommendations", "dest": "/api/recommend.py" },
-    { "src": "/", "dest": "/index.html" }
+    { "src": "/",                   "dest": "/index.html" }
   ]
 }
+
